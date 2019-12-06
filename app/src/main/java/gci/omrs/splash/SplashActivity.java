@@ -15,9 +15,11 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // This will load our Main Activity after specified time
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                // Intent for jumping to MainActivity
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
